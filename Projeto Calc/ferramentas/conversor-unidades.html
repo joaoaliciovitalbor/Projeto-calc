@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert common length, mass, volume, and temperature measurements directly in your browser.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Unit Converter | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/conversor-unidades.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home">
+        <span class="site-logo-mark" aria-hidden="true">U</span>
+        <span>Office Utilities</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../privacidade.html">Privacy</a>
+      </nav>
+      <div class="language-control">
+        <label class="visually-hidden" for="site-language">Language</label>
+        <select class="language-select" id="site-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container">
+      <div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">Everyday calculations</p>
+      <h1 class="page-title">Unit Converter</h1>
+      <p class="page-description">Convert common measurements such as length, weight, volume, and temperature.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- CONVERTER FORM -->
+    <section class="container tool-layout" aria-label="Unit conversion">
+      <div class="tool-panel">
+        <form class="tool-form" id="unit-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="unit-category">Measurement category</label>
+              <select class="field-select" id="unit-category" name="category">
+                <option value="length">Length</option>
+                <option value="mass">Weight and mass</option>
+                <option value="volume">Volume</option>
+                <option value="temperature">Temperature</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="unit-value">Value to convert</label>
+              <input class="field-input" id="unit-value" name="value" type="number" step="any" value="1" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="unit-from">From</label>
+              <select class="field-select" id="unit-from" name="from"></select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="unit-to">To</label>
+              <select class="field-select" id="unit-to" name="to"></select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Convert units</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="result-panel" id="unit-result" aria-live="polite" hidden>
+        <h2>Converted value</h2>
+        <p class="result-value" id="unit-output"></p>
+        <p class="result-details" id="unit-details"></p>
+      </section>
+    </section>
+    <!-- END CONVERTER FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container">
+      <div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>Choose a measurement category, enter a value, and select source and target units. Length, mass, and volume use standard conversion factors; temperature conversions use the Celsius, Fahrenheit, and Kelvin formulas.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>One meter equals 100 centimeters. For temperature, 0 degrees Celsius equals 32 degrees Fahrenheit.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <a href="../privacidade.html">Privacy Policy and Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>

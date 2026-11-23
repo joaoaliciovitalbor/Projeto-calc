@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find a percentage of an amount, or apply a percentage increase or decrease.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Percentage Calculator | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/calc-porcentagem.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home">
+        <span class="site-logo-mark" aria-hidden="true">U</span>
+        <span>Office Utilities</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../privacidade.html">Privacy</a>
+      </nav>
+      <div class="language-control">
+        <label class="visually-hidden" for="site-language">Language</label>
+        <select class="language-select" id="site-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container">
+      <div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">Everyday calculations</p>
+      <h1 class="page-title">Percentage Calculator</h1>
+      <p class="page-description">Find a percentage of an amount, or apply a percentage increase or decrease.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- CALCULATOR FORM -->
+    <section class="container tool-layout" aria-label="Percentage calculation">
+      <div class="tool-panel">
+        <form class="tool-form" id="percentage-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="percentage-operation">Calculation type</label>
+              <select class="field-select" id="percentage-operation" name="operation">
+                <option value="of">What is X% of Y?</option>
+                <option value="increase">Increase by X%</option>
+                <option value="decrease">Decrease by X%</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="percentage-value">Percentage (X)</label>
+              <input class="field-input" id="percentage-value" name="percentage" type="number" min="0" step="any" value="15" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="percentage-base">Base value (Y)</label>
+              <input class="field-input" id="percentage-base" name="base" type="number" step="any" value="200" required>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Calculate percentage</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="result-panel" id="percentage-result" aria-live="polite" hidden>
+        <h2>Calculation result</h2>
+        <p class="result-value" id="percentage-output"></p>
+      </section>
+    </section>
+    <!-- END CALCULATOR FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container">
+      <div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>The percentage-of option multiplies a base value by the percentage and divides by 100. The increase and decrease options apply that percentage to the base amount and return the adjusted total.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>For a base value of 200, 15% is 30. Increasing 200 by 15% gives 230; decreasing 200 by 15% gives 170.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <a href="../privacidade.html">Privacy Policy and Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>

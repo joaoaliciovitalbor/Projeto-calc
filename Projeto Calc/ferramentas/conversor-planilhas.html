@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert Excel, CSV, TSV, and JSON files between common spreadsheet formats locally in your browser.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Spreadsheet Converter | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/file-tools.js" defer></script>
+  <script src="../js/conversor-planilhas.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home"><span class="site-logo-mark" aria-hidden="true">U</span><span>Office Utilities</span></a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../privacidade.html">Privacy</a></nav>
+      <div class="language-control"><label class="visually-hidden" for="site-language">Language</label><select class="language-select" id="site-language" aria-label="Language"><option value="en">English</option><option value="pt">Português</option></select></div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container"><div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div></div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">File converters</p>
+      <h1 class="page-title">Spreadsheet Converter</h1>
+      <p class="page-description">Convert Excel, CSV, TSV, and JSON files between common spreadsheet formats.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- SPREADSHEET CONVERSION FORM -->
+    <section class="container tool-layout" aria-label="Spreadsheet conversion">
+      <div class="tool-panel">
+        <form class="tool-form" id="spreadsheet-form">
+          <div class="field-group">
+            <label class="field-label" for="spreadsheet-file">Choose a spreadsheet or data file (up to 25 MB)</label>
+            <input class="field-input" id="spreadsheet-file" name="file" type="file" accept=".xlsx,.xls,.csv,.tsv,.txt,.json" required>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="spreadsheet-format">Convert to</label>
+            <select class="field-select" id="spreadsheet-format" name="format">
+              <option value="xlsx">Excel workbook (.xlsx)</option>
+              <option value="csv">Comma-separated values (.csv)</option>
+              <option value="tsv">Tab-separated values (.tsv)</option>
+              <option value="json">JSON (.json)</option>
+            </select>
+          </div>
+          <p class="field-hint">Files stay in your browser. When an Excel workbook has multiple sheets, the first sheet is converted.</p>
+          <div class="form-actions"><button class="button" type="submit">Convert file</button></div>
+        </form>
+      </div>
+      <section class="result-panel file-result-panel" id="spreadsheet-result" aria-live="polite" hidden>
+        <h2>Conversion status</h2>
+        <p class="file-status" id="spreadsheet-status" role="status"></p>
+        <button class="button" id="spreadsheet-download" type="button" hidden>Download converted file</button>
+      </section>
+    </section>
+    <!-- END SPREADSHEET CONVERSION FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container"><div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div></div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>Select an Excel, CSV, TSV, or JSON file and choose an output format. The file is parsed and converted on your device; no upload is required. Excel workbooks with several sheets use their first worksheet for this conversion.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>Turn a CSV export into an Excel workbook to continue sorting and editing it, or convert a small JSON array into a spreadsheet for review. Check date and number formatting after conversion because applications can interpret values differently.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer"><div class="footer-inner"><p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p><nav class="footer-nav" aria-label="Legal information"><a href="../privacidade.html">Privacy Policy and Terms of Use</a></nav></div></footer>
+  <!-- END FOOTER -->
+</body>
+</html>

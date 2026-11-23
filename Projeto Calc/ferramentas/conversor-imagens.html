@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Batch convert PNG, JPEG, and WebP images to another common image format directly in your browser.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Image Format Converter | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/file-tools.js" defer></script>
+  <script src="../js/conversor-imagens.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home"><span class="site-logo-mark" aria-hidden="true">U</span><span>Office Utilities</span></a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../privacidade.html">Privacy</a></nav>
+      <div class="language-control"><label class="visually-hidden" for="site-language">Language</label><select class="language-select" id="site-language" aria-label="Language"><option value="en">English</option><option value="pt">Português</option></select></div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container"><div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div></div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">File converters</p>
+      <h1 class="page-title">Image Format Converter</h1>
+      <p class="page-description">Batch convert PNG, JPEG, and WebP images in your browser.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- IMAGE CONVERSION FORM -->
+    <section class="container tool-layout" aria-label="Image conversion">
+      <div class="tool-panel">
+        <form class="tool-form" id="image-converter-form">
+          <div class="field-group">
+            <label class="field-label" for="image-files">Choose images (up to 10 files, 20 MB each)</label>
+            <input class="field-input" id="image-files" name="files" type="file" accept="image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp" multiple required>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="image-format">Output format</label>
+            <select class="field-select" id="image-format" name="format">
+              <option value="image/png">PNG</option>
+              <option value="image/jpeg">JPEG</option>
+              <option value="image/webp">WebP</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="image-quality">JPEG/WebP quality (10–100%)</label>
+            <input class="field-input" id="image-quality" name="quality" type="range" min="0.1" max="1" step="0.05" value="0.9">
+            <output class="field-hint" id="image-quality-value" for="image-quality">90%</output>
+          </div>
+          <p class="field-hint">Images are converted on your device. Converting transparent images to JPEG replaces transparency with a white background.</p>
+          <div class="form-actions"><button class="button" type="submit">Convert images</button></div>
+        </form>
+      </div>
+      <section class="result-panel file-result-panel" id="image-converter-result" aria-live="polite" hidden>
+        <h2>Converted images</h2>
+        <p class="file-status" id="image-converter-status" role="status"></p>
+        <ul class="file-download-list" id="image-download-list"></ul>
+      </section>
+    </section>
+    <!-- END IMAGE CONVERSION FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container"><div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div></div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>The browser decodes each selected PNG, JPEG, or WebP image and re-encodes it with the Canvas API. Choose a format and quality, then download each converted image. The files are not sent to a server.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>Convert a set of large photos to WebP for web use, or save a WebP image as PNG for an application that needs lossless transparency. JPEG does not support transparency, so transparent areas are filled with white.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer"><div class="footer-inner"><p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p><nav class="footer-nav" aria-label="Legal information"><a href="../privacidade.html">Privacy Policy and Terms of Use</a></nav></div></footer>
+  <!-- END FOOTER -->
+</body>
+</html>

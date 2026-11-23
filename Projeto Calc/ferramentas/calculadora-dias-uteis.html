@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calculate the calendar-day and business-day difference between two dates to track deadlines and plan activities.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Business Days and Date Range Calculator | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/calc-datas.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home">
+        <span class="site-logo-mark" aria-hidden="true">U</span>
+        <span>Office Utilities</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../privacidade.html">Privacy</a>
+      </nav>
+      <div class="language-control">
+        <label class="visually-hidden" for="site-language">Language</label>
+        <select class="language-select" id="site-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container">
+      <div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">Time and deadlines</p>
+      <h1 class="page-title">Business Days Calculator</h1>
+      <p class="page-description">Count calendar and business days between dates to organize deadlines and deliveries.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- CALCULATOR FORM -->
+    <section class="container tool-layout" aria-label="Count days between dates">
+      <div class="tool-panel">
+        <form class="tool-form" id="dates-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="start-date">Start date</label>
+              <input class="field-input" id="start-date" name="start-date" type="date" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="end-date">End date</label>
+              <input class="field-input" id="end-date" name="end-date" type="date" required>
+            </div>
+          </div>
+          <p class="field-hint">Business days include Monday through Friday and do not exclude holidays.</p>
+          <div class="form-actions">
+            <button class="button" type="submit">Calculate days</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="result-panel" id="dates-result" aria-live="polite" hidden>
+        <h2>Date range result</h2>
+        <p class="result-details" id="dates-range"></p>
+        <p class="result-value" id="calendar-days"></p>
+        <p class="result-details" id="business-days"></p>
+      </section>
+    </section>
+    <!-- END CALCULATOR FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container">
+      <div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>The calendar-day difference excludes the start date. Business days use the same interval, from the day after the start date through and including the end date, and count only Monday through Friday. National, state, local, and special-calendar holidays are not excluded.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>From Monday to Friday of the same week, there are 4 calendar days of difference and 4 business days counted after the start date, including Friday. For deadlines that include the first day or exclude the last, adjust the interpretation according to the applicable rule.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <a href="../privacidade.html">Privacy Policy and Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>
