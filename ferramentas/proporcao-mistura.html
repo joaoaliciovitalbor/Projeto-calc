@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calculate a 1:N mixture ratio, find the volume of each component, and estimate the final cost per liter.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>1:N Mixing and Dilution Calculator | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/calc-mistura.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home">
+        <span class="site-logo-mark" aria-hidden="true">U</span>
+        <span>Office Utilities</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../privacidade.html">Privacy</a>
+      </nav>
+      <div class="language-control">
+        <label class="visually-hidden" for="site-language">Language</label>
+        <select class="language-select" id="site-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container">
+      <div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">Production and quality</p>
+      <h1 class="page-title">Ratio and Mixture Calculator 1:N</h1>
+      <p class="page-description">Calculate the concentrate and diluent volumes for a mixture and see an estimated cost per liter.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- CALCULATOR FORM -->
+    <section class="container tool-layout" aria-label="Mixture calculation">
+      <div class="tool-panel">
+        <form class="tool-form" id="mix-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="total-volume">Desired final volume</label>
+              <input class="field-input" id="total-volume" name="total-volume" type="number" min="0.001" step="any" value="1" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="volume-unit">Volume unit</label>
+              <select class="field-select" id="volume-unit" name="volume-unit">
+                <option value="L">Liters (L)</option>
+                <option value="mL">Milliliters (mL)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="ratio-parts">Diluent parts (N)</label>
+              <input class="field-input" id="ratio-parts" name="ratio-parts" type="number" min="0" step="any" value="4" required>
+              <p class="field-hint">The ratio is 1 part concentrate to N parts diluent.</p>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="concentrate-cost">Concentrate cost per liter (R$)</label>
+              <input class="field-input" id="concentrate-cost" name="concentrate-cost" type="number" min="0" step="0.01" value="50" required>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Calculate ratio</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="result-panel" id="mix-result" aria-live="polite" hidden>
+        <h2>Mixture quantities</h2>
+        <p class="result-details" id="mix-components"></p>
+        <p class="result-value" id="mix-cost"></p>
+      </section>
+    </section>
+    <!-- END CALCULATOR FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container">
+      <div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>In a 1:N ratio, one part is concentrate and N parts are diluent. There are N + 1 total parts. The calculator divides the final volume by that total to find each part and multiplies the concentrate cost per liter by the concentrate fraction to estimate the mixture's unit cost, assuming the diluent has no cost.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>To prepare 1 liter at a 1:4 ratio, use 0.2 liters (200 mL) of concentrate and 0.8 liters (800 mL) of diluent. If the concentrate costs R$ 50.00 per liter and the diluent is assumed to be free, the estimated final mixture cost is R$ 10.00 per liter.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <a href="../privacidade.html">Privacy Policy and Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>

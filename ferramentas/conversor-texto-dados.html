@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Remove duplicate list entries, convert text to uppercase or lowercase, and export your data as a CSV file.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>List Cleaner and Text-to-CSV Converter | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/conversor-dados.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home">
+        <span class="site-logo-mark" aria-hidden="true">U</span>
+        <span>Office Utilities</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../privacidade.html">Privacy</a>
+      </nav>
+      <div class="language-control">
+        <label class="visually-hidden" for="site-language">Language</label>
+        <select class="language-select" id="site-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container">
+      <div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">Text and data</p>
+      <h1 class="page-title">Text Cleaner and Converter</h1>
+      <p class="page-description">Remove duplicate lines, change text case, and export content as CSV.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- TEXT TOOL -->
+    <section class="container tool-layout" aria-label="Text conversion and cleanup">
+      <div class="tool-panel">
+        <form class="tool-form" id="text-form">
+          <div class="field-group">
+            <label class="field-label" for="source-text">Input text</label>
+            <textarea class="field-textarea" id="source-text" name="source-text" placeholder="Type or paste a list, with one item per line."></textarea>
+            <p class="field-hint">Your data is processed locally in your browser.</p>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="button" data-action="remove-duplicates">Remove duplicates</button>
+            <button class="button button-secondary" type="button" data-action="uppercase">UPPERCASE</button>
+            <button class="button button-secondary" type="button" data-action="lowercase">lowercase</button>
+            <button class="button button-secondary" type="button" data-action="export-csv">Export CSV</button>
+          </div>
+          <p class="field-hint" id="text-feedback" role="status"></p>
+          <div class="field-group">
+            <label class="field-label" for="result-text">Output</label>
+            <textarea class="field-textarea" id="result-text" name="result-text" readonly aria-live="polite" placeholder="Your result will appear here."></textarea>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- END TEXT TOOL -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container">
+      <div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>Duplicate removal compares each line after trimming leading and trailing spaces, keeps the first occurrence, and preserves the original order. Case conversion changes all input text. CSV export creates a single-column file and escapes quotes and separators as needed to keep values readable.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>If a list contains “Ana”, “Bruno”, and “Ana” on separate lines, removing duplicates returns only “Ana” and “Bruno”, in that order. After editing the text, choose “Export CSV” to download the result and open it in a spreadsheet program. Check the encoding and delimiter for your application.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <a href="../privacidade.html">Privacy Policy and Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate EAN-13 or Code128 barcodes in your browser and export the result as a PNG image.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>EAN-13 and Code128 Barcode Generator | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js" defer></script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/gerador-barras.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home">
+        <span class="site-logo-mark" aria-hidden="true">U</span>
+        <span>Office Utilities</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../privacidade.html">Privacy</a>
+      </nav>
+      <div class="language-control">
+        <label class="visually-hidden" for="site-language">Language</label>
+        <select class="language-select" id="site-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container">
+      <div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">Text and data</p>
+      <h1 class="page-title">Barcode Generator</h1>
+      <p class="page-description">Create an EAN-13 or Code128 barcode and download it as a PNG image.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- CALCULATOR FORM -->
+    <section class="container tool-layout" aria-label="Generate barcode">
+      <div class="tool-panel">
+        <form class="tool-form" id="barcode-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="barcode-format">Barcode format</label>
+              <select class="field-select" id="barcode-format" name="barcode-format">
+                <option value="EAN13">EAN-13</option>
+                <option value="CODE128">Code128</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="barcode-value">Number or text</label>
+              <input class="field-input" id="barcode-value" name="barcode-value" type="text" inputmode="numeric" maxlength="80" autocomplete="off" placeholder="e.g. 5901234123457" required>
+              <p class="field-hint" id="barcode-hint">EAN-13 accepts 12 digits (the check digit is calculated) or 13 digits with a check digit.</p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Generate barcode</button>
+            <button class="button button-secondary" id="download-barcode" type="button" disabled>Download PNG</button>
+          </div>
+          <p class="field-hint" id="barcode-error" role="status"></p>
+        </form>
+      </div>
+
+      <section class="result-panel" id="barcode-result" aria-live="polite" hidden>
+        <h2>Generated barcode</h2>
+        <canvas id="barcode-canvas" aria-label="Barcode image"></canvas>
+      </section>
+    </section>
+    <!-- END CALCULATOR FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container">
+      <div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>EAN-13 identifies products with 13 digits. Enter the first 12 digits to calculate the check digit, or enter all 13 digits for validation. Code128 can encode text and numbers in a more flexible sequence. The barcode is generated in your browser using JsBarcode; the download button saves the displayed image as a PNG.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>Select EAN-13 and enter 590123412345 to calculate the check digit and draw the barcode. For internal identifiers with letters and numbers, select Code128 and enter the desired content. Always validate the code and printout with the scanning system used in your operation.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <a href="../privacidade.html">Privacy Policy and Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Extract selectable text and table-like rows from a PDF into an Excel workbook or CSV file in your browser.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>PDF to Excel Converter | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/file-tools.js" defer></script>
+  <script src="../js/conversor-pdf-excel.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home"><span class="site-logo-mark" aria-hidden="true">U</span><span>Office Utilities</span></a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../privacidade.html">Privacy</a></nav>
+      <div class="language-control"><label class="visually-hidden" for="site-language">Language</label><select class="language-select" id="site-language" aria-label="Language"><option value="en">English</option><option value="pt">Português</option></select></div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container"><div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div></div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">File converters</p>
+      <h1 class="page-title">PDF to Excel Converter</h1>
+      <p class="page-description">Extract selectable PDF text into an editable Excel workbook or CSV file.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- PDF CONVERSION FORM -->
+    <section class="container tool-layout" aria-label="PDF to Excel conversion">
+      <div class="tool-panel">
+        <form class="tool-form" id="pdf-excel-form">
+          <div class="field-group">
+            <label class="field-label" for="pdf-excel-file">Choose a PDF file (up to 25 MB)</label>
+            <input class="field-input" id="pdf-excel-file" name="file" type="file" accept=".pdf,application/pdf" required>
+          </div>
+          <p class="field-hint">For Google Drive or Dropbox, use the device file picker: browse the provider app on mobile or a synced folder on desktop if available. This site does not connect to your cloud account; the selected file stays on this device.</p>
+          <div class="field-group">
+            <label class="field-label" for="pdf-excel-format">Output format</label>
+            <select class="field-select" id="pdf-excel-format" name="format">
+              <option value="xlsx">Excel workbook (.xlsx)</option>
+              <option value="csv">CSV spreadsheet (.csv)</option>
+              <option value="txt">Plain text (.txt)</option>
+            </select>
+          </div>
+          <p class="field-hint">Files are processed in this browser and are not uploaded. Scanned PDFs need OCR, which this tool does not provide; complex tables may need cleanup.</p>
+          <div class="form-actions"><button class="button" type="submit">Convert PDF</button></div>
+        </form>
+      </div>
+      <section class="result-panel file-result-panel" id="pdf-excel-result" aria-live="polite" hidden>
+        <h2>Conversion status</h2>
+        <p class="file-status" id="pdf-excel-status" role="status"></p>
+        <button class="button" id="pdf-excel-download" type="button" hidden>Download converted file</button>
+      </section>
+    </section>
+    <!-- END PDF CONVERSION FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container"><div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div></div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>The converter reads selectable text from each PDF page, groups nearby text into rows, and creates an Excel workbook with one sheet per page. You can also export the extracted content as CSV or plain text. Processing happens locally in your browser.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>Use a text-based statement or report to move its selectable values into a spreadsheet for review. This is a best-effort extraction, not OCR: scanned pages and complicated layouts may not preserve their original columns, so verify the workbook before using it.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer"><div class="footer-inner"><p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p><nav class="footer-nav" aria-label="Legal information"><a href="../privacidade.html">Privacy Policy and Terms of Use</a></nav></div></footer>
+  <!-- END FOOTER -->
+</body>
+</html>

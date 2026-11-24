@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check whether a measurement falls within positive and negative tolerances for quality control.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Tolerance and Margin of Error Calculator | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/calc-tolerancia.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home">
+        <span class="site-logo-mark" aria-hidden="true">U</span>
+        <span>Office Utilities</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../privacidade.html">Privacy</a>
+      </nav>
+      <div class="language-control">
+        <label class="visually-hidden" for="site-language">Language</label>
+        <select class="language-select" id="site-language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <main class="main-content">
+    <!-- ADSENSE PLACEHOLDER: BELOW THE NAVIGATION -->
+    <div class="container">
+      <div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <header class="container page-intro">
+      <p class="eyebrow">Production and quality</p>
+      <h1 class="page-title">Tolerance Calculator</h1>
+      <p class="page-description">Compare a measured value with the nominal value and allowed tolerances to check compliance.</p>
+    </header>
+    <!-- END INTRODUCTION -->
+
+    <!-- CALCULATOR FORM -->
+    <section class="container tool-layout" aria-label="Tolerance check">
+      <div class="tool-panel">
+        <form class="tool-form" id="tolerance-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label" for="nominal-value">Nominal value</label>
+              <input class="field-input" id="nominal-value" name="nominal-value" type="number" step="any" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="measured-value">Measured value</label>
+              <input class="field-input" id="measured-value" name="measured-value" type="number" step="any" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="lower-tolerance">Lower tolerance (−)</label>
+              <input class="field-input" id="lower-tolerance" name="lower-tolerance" type="number" min="0" step="any" value="0.5" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="upper-tolerance">Upper tolerance (+)</label>
+              <input class="field-input" id="upper-tolerance" name="upper-tolerance" type="number" min="0" step="any" value="0.5" required>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Check measurement</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="result-panel" id="tolerance-result" aria-live="polite" hidden>
+        <h2>Inspection result</h2>
+        <p class="result-status" id="tolerance-status"></p>
+        <p class="result-details" id="tolerance-details"></p>
+        <p class="result-value" id="tolerance-range"></p>
+      </section>
+    </section>
+    <!-- END CALCULATOR FORM -->
+
+    <!-- ADSENSE PLACEHOLDER: BELOW THE RESULT -->
+    <div class="container">
+      <div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="container content-sections">
+      <section class="content-section">
+        <h2>How it works</h2>
+        <p>The acceptable range is calculated by subtracting the lower tolerance from the nominal value and adding the upper tolerance. A measurement is approved when it falls within these limits, inclusive. Tolerances are absolute values in the same unit as the nominal value; for example, compare millimeters with millimeters.</p>
+      </section>
+      <section class="content-section">
+        <h2>Practical example</h2>
+        <p>If the nominal value is 10 mm and both tolerances are 0.5 mm, the acceptable range is 9.5 mm to 10.5 mm. A measurement of 10.3 mm is approved; a measurement of 10.6 mm is outside the range. This tool does not replace the inspection criteria defined for each process.</p>
+      </section>
+    </div>
+    <!-- END SEO CONTENT -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p>
+      <nav class="footer-nav" aria-label="Legal information">
+        <a href="../privacidade.html">Privacy Policy and Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+</html>

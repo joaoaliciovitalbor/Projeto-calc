@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert pasted text to uppercase or lowercase in your browser.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f6f6">
+  <title>Uppercase and Lowercase Converter | Office Utilities</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ferramentas.css">
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/conversor-dados.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="../index.html" aria-label="Office Utilities home"><span class="site-logo-mark" aria-hidden="true">U</span><span>Office Utilities</span></a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../privacidade.html">Privacy</a></nav>
+      <div class="language-control"><label class="visually-hidden" for="site-language">Language</label><select class="language-select" id="site-language" aria-label="Language"><option value="en">English</option><option value="pt">Português</option></select></div>
+    </div>
+  </header>
+  <main class="main-content">
+    <div class="container"><div class="ad-slot ad-slot-top" aria-label="Advertising placeholder"></div></div>
+    <header class="container page-intro">
+      <p class="eyebrow">Text tools</p>
+      <h1 class="page-title">Uppercase and Lowercase Converter</h1>
+      <p class="page-description">Change the letter case of text without changing its line breaks.</p>
+    </header>
+    <section class="container tool-layout" aria-label="Text case converter">
+      <div class="tool-panel">
+        <form class="tool-form" id="text-form">
+          <div class="field-group"><label class="field-label" for="source-text">Input text</label><textarea class="field-textarea" id="source-text" name="source-text" placeholder="Type or paste text here."></textarea></div>
+          <div class="form-actions"><button class="button" type="button" data-action="uppercase">Convert to uppercase</button><button class="button button-secondary" type="button" data-action="lowercase">Convert to lowercase</button></div>
+          <p class="field-hint" id="text-feedback" role="status"></p>
+          <div class="field-group"><label class="field-label" for="result-text">Converted text</label><textarea class="field-textarea" id="result-text" name="result-text" readonly aria-live="polite"></textarea></div>
+        </form>
+      </div>
+    </section>
+    <div class="container"><div class="ad-slot ad-slot-result" aria-label="Advertising placeholder"></div></div>
+    <div class="container content-sections">
+      <section class="content-section"><h2>How it works</h2><p>Choose uppercase or lowercase to transform the text in your browser. Line breaks and punctuation are preserved, and locale-aware conversion supports accented characters.</p></section>
+      <section class="content-section"><h2>Practical example</h2><p>Paste a list of names or headings, convert them to the capitalization required by a form, and copy the result into your document.</p></section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p class="footer-copy">© 2026 Office Utilities. Free tools for work.</p><nav class="footer-nav" aria-label="Legal information"><a href="../privacidade.html">Privacy Policy and Terms of Use</a></nav></div></footer>
+</body>
+</html>
